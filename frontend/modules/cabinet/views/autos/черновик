@@ -1,0 +1,266 @@
+<div class="col-md-8 col-lg-7" align="center" style="height: 550px;"><br>
+
+    <ul class="nav nav-tabs">
+        <li class="active dropdown">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="../../uploads/img/autosparts/furgon-icon.png" width="65px">
+                <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="">
+                    <a href="#tab_1_1" tabindex="-1" data-toggle="tab" aria-expanded="false"> Боковые части </a>
+                </li>
+                <li class="">
+                    <a href="#tab_1_2" tabindex="-1" data-toggle="tab" aria-expanded="false"> Задняя часть </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <img src="../../uploads/img/autosparts/furgon-icon-2.png" width="65px"><i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="">
+                    <a href="#tab_2_1" tabindex="-1" data-toggle="tab" aria-expanded="false"> Боковые части </a>
+                </li>
+                <li class="">
+                    <a href="#tab_2_2" tabindex="-1" data-toggle="tab" aria-expanded="false"> Передняя и задняя части </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="tab_1_1">
+            <!-- Вкладка 1 -->
+            <div class="furgon-side-left">
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'up','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'up', 'place' => '1'])?>" data-method="post" class="point point1 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'up', 'place' => '1'])?>" id="point1" class="point point1 btn btn-circle btn-icon-only btn-default">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'left','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'left', 'place' => '1'])?>" data-method="post" class="point point2 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a  href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'left', 'place' => '1'])?>" id="point2" class="point point2 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'left','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'left', 'place' => '2'])?>" data-method="post" class="point point3 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'left', 'place' => '2'])?>" id="point3" class="point point3 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                        <a href="#tab_1_2" data-toggle="tab" aria-expanded="false" class="point point4 btn btn-circle btn-icon-only btn-default">
+                            <i class="fa fa-cogs"></i>
+                        </a>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'left','place'=>'3'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'left', 'place' => '3'])?>" data-method="post" class="point point7 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'left', 'place' => '3'])?>" id="point7" class="point point7 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+            </div>
+            <div class="furgon-side-right" style="transform: scale(-1, 1)"><br><br>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'right','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'right', 'place' => '2'])?>" data-method="post" class="point point5 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'right', 'place' => '2'])?>" id="point5" class="point point5 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'right','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'right', 'place' => '1'])?>" data-method="post" class="point point6 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'right', 'place' => '1'])?>" id="point6" class="point point6 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+
+            </div>
+            <!-- Конец Вкладка 1 -->
+        </div>
+        <div class="tab-pane fade" id="tab_1_2">
+            <!-- Вкладка 2 -->
+            <div class="furgon-side-down">
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'down','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'down', 'place' => '1'])?>" data-method="post" class="point point8 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'down', 'place' => '1'])?>" id="point8" class="point point8 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'down','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'down', 'place' => '2'])?>" data-method="post" class="point point9 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'down', 'place' => '2'])?>" id="point9" class="point point9 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                        <a href="#tab_1_1" data-toggle="tab" aria-expanded="false" class="point point10 btn btn-circle btn-icon-only btn-default">
+                            <i class="fa fa-cogs"></i>
+                        </a>
+                </div>
+            </div>
+
+            <!-- Конец Вкладка 2 -->
+        </div>
+        <div class="tab-pane fade" id="tab_2_1">
+            <!-- Вкладка 3 -->
+            <div class="furgon-side-2">
+                <div class="item">
+                    <a href="#tab_2_2" data-toggle="tab" aria-expanded="false" class="point point1 btn btn-circle btn-icon-only btn-default">
+                        <i class="fa fa-cogs"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'left','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'left', 'place' => '1'])?>" data-method="post" class="point point2 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a  href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'left', 'place' => '1'])?>" id="point2" class="point point2 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'left','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'left', 'place' => '2'])?>" data-method="post" class="point point6 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'left', 'place' => '2'])?>" id="point3" class="point point6 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <a href="#tab_2_2" data-toggle="tab" aria-expanded="false" class="point point4 btn btn-circle btn-icon-only btn-default">
+                        <i class="fa fa-cogs"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="furgon-side-2" style="transform: scale(-1, 1)"><br><br>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'right','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'right', 'place' => '2'])?>" data-method="post" class="point point5 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'right', 'place' => '2'])?>" id="point5" class="point point5 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'right','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'right', 'place' => '1'])?>" data-method="post" class="point point6 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'right', 'place' => '1'])?>" id="point6" class="point point6 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+
+            </div>
+            <!-- Конец Вкладка 3 -->
+        </div>
+        <div class="tab-pane fade" id="tab_2_2">
+            <!-- Вкладка 4 -->
+            <div class="furgon-side-down-2">
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'up','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'up', 'place' => '1'])?>" data-method="post" class="point point12 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'up', 'place' => '1'])?>" id="point1" class="point point12 btn btn-circle btn-icon-only btn-default">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'up','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'up', 'place' => '2'])?>" data-method="post" class="point point13 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'up', 'place' => '2'])?>" id="point1" class="point point13 btn btn-circle btn-icon-only btn-default">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'down','place'=>'1'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'down', 'place' => '1'])?>" data-method="post" class="point point11 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'down', 'place' => '1'])?>" id="point8" class="point point11 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <?if (AutoAdvertPlace::find()->where(['auto_id'=>$id,'side'=>'down','place'=>'2'])->all()) {?>
+                        <a href="<?= Url::to(['place/delete', 'id' => $id, 'side' => 'down', 'place' => '2'])?>" data-method="post" class="point point9 btn btn-circle red-mint btn-icon-only btn-default">
+                            <i class="fa fa-close"></i>
+                        </a>
+                    <?}else{?>
+                        <a href="<?= Url::to(['place/create', 'id' => $id, 'side' => 'down', 'place' => '2'])?>" id="point9" class="point point9 btn btn-circle btn-icon-only btn-default" data-toggle="modal">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    <?}?>
+                </div>
+                <div class="item">
+                    <a href="#tab_2_1" data-toggle="tab" aria-expanded="false" class="point point14 btn btn-circle btn-icon-only btn-default">
+                        <i class="fa fa-cogs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Конец Вкладка 4 -->
+        </div>
+    </div>
+</div>

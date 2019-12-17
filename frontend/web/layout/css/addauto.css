@@ -1,0 +1,157 @@
+.sedan > input[type=radio], .universal > input[type=radio], .vnedorojnik > input[type=radio], .minivan > input[type=radio],
+.kabrio > input[type=radio], .pickup > input[type=radio], .minibus > input[type=radio], .furgon > input[type=radio],
+.platform > input[type=radio], .color > input[type=radio]
+{
+    display: none;
+}
+.sedan, .universal, .vnedorojnik, .minivan, .kabrio, .pickup, .minibus, .furgon, .platform > p {
+    text-align: center;
+    cursor: pointer;
+}
+
+.sedan > span {
+    background: url(/uploads/img/sedan.png);
+    display:inline-block;
+    width:70px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.sedan > input[type=radio]:checked + span {
+    background: url(/uploads/img/sedan_ok.png);
+    color: #637cb2;
+}
+
+.universal > span {
+    background: url(/uploads/img/universal.png);
+    display:inline-block;
+    width:73px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.universal > input[type=radio]:checked + span {
+    background: url(/uploads/img/universal_ok.png);
+    color: #637cb2;
+}
+.vnedorojnik > span {
+    background: url(/uploads/img/vnedorojnik.png);
+    display:inline-block;
+    width:67px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.vnedorojnik > input[type=radio]:checked + span {
+    background: url(/uploads/img/vnedorojnik_ok.png);
+    color: #637cb2;
+}
+.minivan > span {
+    background: url(/uploads/img/minivan.png);
+    display:inline-block;
+    width:71px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.minivan > input[type=radio]:checked + span {
+    background: url(/uploads/img/minivan_ok.png);
+    color: #637cb2;
+}
+.kabrio > span {
+    background: url(/uploads/img/kabrio.png);
+    display:inline-block;
+    width:68px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.kabrio > input[type=radio]:checked + span {
+    background: url(/uploads/img/kabrio_ok.png);
+    color: #637cb2;
+}
+.pickup > span {
+    background: url(/uploads/img/pickup.png);
+    display:inline-block;
+    width:73px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.pickup > input[type=radio]:checked + span {
+    background: url(/uploads/img/pickup_ok.png);
+    color: #637cb2;
+}
+.minibus > span {
+    background: url(/uploads/img/minibus.png);
+    display:inline-block;
+    width:82px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+
+.minibus > input[type=radio]:checked + span {
+    background: url(/uploads/img/minibus_ok.png);
+    color: #637cb2;
+}
+.furgon > span {
+    background: url(/uploads/img/furgon.png);
+    display:inline-block;
+    width:82px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+.furgon > input[type=radio]:checked + span {
+    background: url(/uploads/img/furgon_ok.png);
+    color: #637cb2;
+}
+.platform > span {
+    background: url(/uploads/img/platform.png);
+    display:inline-block;
+    width:82px;
+    height:35px;
+    vertical-align:middle;
+    margin: 5px;
+    border: 1px #fff;
+}
+.platform > input[type=radio]:checked + span {
+    background: url(/uploads/img/platform_ok.png);
+    color: #637cb2;
+}
+#autotype:hover {
+    border-top: 2px solid #637cb2;
+    color: #637cb2;
+    margin-top: 10px;
+    margin-bottom: -2px;
+}
+.color > span {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%!important;
+    border: solid 1px #bac3d0;
+    display:inline-block;
+    margin-right: 10px;
+}
+
+.color > input[type=radio]:checked + span {
+    background-image:url(//yastatic.net/autoru-frontend-poffer/_/je8WQmPC8iJTFC_VIZfiavpvoQU.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: #637cb2;
+}
